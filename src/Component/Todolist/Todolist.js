@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import * as S from './TodolistStyle';
-import TodoContent from './TodoContent'
+import TodoContent from './TodoContent';
+import { TodoProvider } from './TodoModul';
 
 const Todolist = () => {
     const [ todoText, setTodoText ] = useState(null);
@@ -9,9 +10,8 @@ const Todolist = () => {
         setTodoText(e.target.value);
     }
 
-    console.log(todoText)
-
     return(
+        <TodoProvider>
             <S.TodoListBox>
                 <S.TodoList>
                     {/* TodoList 날짜, 할일 표시 */}
@@ -33,6 +33,7 @@ const Todolist = () => {
                     </S.TodoFooter>
                 </S.TodoList>
             </S.TodoListBox>
+        </TodoProvider>
     )
 }
 

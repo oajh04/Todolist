@@ -68,13 +68,26 @@ const state = useContext(TodoStateContext); 를 다 써야함
 const state = useTodoState(); 로 간결하게 가능
 */
 export const useTodoState = () => {
-  return useContext(TodoStateContext);
+  const context = useContext(TodoStateContext);
+  if(!context) {
+    alert("오류");
+  }
+  return context;
+
 }
 
 export const useTodoDispatch = () => {
-  return useContext(TodoDispatchContext);
+  const context = useContext(TodoDispatchContext);
+  if(!context) {
+    alert("오류");
+  }
+  return context;
 }
 
 export const useTodoId = () => {
-  return useContext(TodoIdContext);
+  const context = useContext(TodoIdContext);
+  if(!context) {
+    alert("오류");
+  }
+  return context;
 }
