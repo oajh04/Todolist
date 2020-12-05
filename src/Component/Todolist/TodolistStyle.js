@@ -32,6 +32,7 @@ export const TodoHeader = styled.div`
 
 export const TodoBody = styled.div`
     height: 630px;
+    overflow: scroll;
 `
 export const BodyContent = styled.div`
     position: absolute;
@@ -57,6 +58,20 @@ export const BodyContent = styled.div`
     }
 `
 
+export const Modify = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dee2e6;
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    &:hover{
+        color: #ff6b6b;
+    }
+    display: none;
+`;
+
 export const Remove = styled.div`
     display: flex;
     align-items: center;
@@ -72,7 +87,6 @@ export const Remove = styled.div`
 
 export const Container = styled.div`
     width: 500px;
-    display: flex;
     align-items: center;
     margin: 0 auto;
     margin-top: 10px;
@@ -83,7 +97,14 @@ export const Container = styled.div`
         ${Remove} {
             display: block;
         }
+        ${Modify}{
+            display: block;
+        }
     }
+`;
+
+export const ContainerBox = styled.div`
+    display: flex;
 `;
 
 export const Check = styled.div`
@@ -113,6 +134,11 @@ export const Content = styled.div`
             text-decoration: line-through;
             color: #ced4da;
         `}
+`;
+
+export const ModifyInput = styled.div`
+    display: block;
+
 `;
 
 export const TodoFooter = styled.div`
