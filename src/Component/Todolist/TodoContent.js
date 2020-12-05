@@ -8,8 +8,16 @@ const TodoContent = () => {
 
     return(
         <>
-
-            <TodoContainer text="프로젝트 생성" check={true}/>
+            {
+                todos.map((data) => {
+                    return (
+                        <>
+                            <TodoContainer key={data.id} id={data.id} text={data.text} check={data.check}/>
+                        </>
+                    )
+                })
+            }
+            
         </>
     )
 }
