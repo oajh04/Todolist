@@ -4,12 +4,12 @@ const initialTodos = [
   {
     id: 1,
     text: '프로젝트 생성하기',
-    check: true
+    check: false
   },
   {
     id: 2,
     text: '컴포넌트 스타일링하기',
-    check: true
+    check: false
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const todoReducer = (state, action) => {
         return state.filter(todo => todo.id !== action.id);
     case 'CHANGE_TODO':
         return state.map(todo=>
-            todo.id === action.id ? todo.text = action.text : todo);
+            todo.id === action.id ? { ...todo, text: action.modifyText} : todo);
     default:
         return null;  
   }
@@ -70,7 +70,7 @@ const state = useTodoState(); 로 간결하게 가능
 export const useTodoState = () => {
   const context = useContext(TodoStateContext);
   if(!context) {
-    alert("오류");
+    alert("STATE 오류");
   }
   return context;
 
@@ -79,7 +79,7 @@ export const useTodoState = () => {
 export const useTodoDispatch = () => {
   const context = useContext(TodoDispatchContext);
   if(!context) {
-    alert("오류");
+    alert("DISPATCH 오류");
   }
   return context;
 }
@@ -87,7 +87,7 @@ export const useTodoDispatch = () => {
 export const useTodoId = () => {
   const context = useContext(TodoIdContext);
   if(!context) {
-    alert("오류");
+    alert("USETODOID 오류");
   }
   return context;
 }
