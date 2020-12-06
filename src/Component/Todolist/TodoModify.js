@@ -22,10 +22,10 @@ const TodoModify = ({ id }) => {
 
     return (
         <S.ModifyInput key={id}>
-            <form onSubmit={onSubmit}>
-                <input onChange={onChange} />
+            <S.ModifyBox onSubmit={onSubmit}>
+                <input onChange={onChange} placeholder="수정할 내용을 입력하세요" />
                 <button>수정하기</button>
-            </form>
+            </S.ModifyBox>
         </S.ModifyInput>
     )
 

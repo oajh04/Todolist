@@ -69,7 +69,6 @@ export const Modify = styled.div`
     &:hover{
         color: #ff6b6b;
     }
-    display: none;
 `;
 
 export const Remove = styled.div`
@@ -82,7 +81,6 @@ export const Remove = styled.div`
     &:hover {
         color: #ff6b6b;
     }
-    display: none;
 `;
 
 export const Container = styled.div`
@@ -93,14 +91,6 @@ export const Container = styled.div`
     border-bottom: 1px solid grey;
     padding-top: 12px;
     padding-bottom: 22px;
-    &:hover {
-        ${Remove} {
-            display: block;
-        }
-        ${Modify}{
-            display: block;
-        }
-    }
 `;
 
 export const ContainerBox = styled.div`
@@ -138,7 +128,27 @@ export const Content = styled.div`
 
 export const ModifyInput = styled.div`
     display: block;
+`;
 
+export const ModifyBox = styled.form`
+    position: relative;
+    align-items: center;
+    text-align: center;
+    input{
+        width: 200px;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-right: 20px;
+        &:focus{
+            border: none;
+        }
+    }
+    button{
+        width: 70px;
+        border: none;
+        color: #ffffff;
+        background-color: #3CAEFF;
+    }
 `;
 
 export const TodoFooter = styled.div`
