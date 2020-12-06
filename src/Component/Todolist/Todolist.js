@@ -2,19 +2,18 @@ import React from 'react';
 import * as S from './TodolistStyle';
 import TodoContent from './TodoContent';
 import TodoAdd from './TodoAdd';
-import { TodoProvider, useTodoState } from './TodoModul';
+import TodoDate from './TodoDate.js'
+import { TodoProvider } from './TodoModul';
 
 const Todolist = () => {
-    const todos = useTodoState();
     
-
     return(
         <TodoProvider>
             <S.TodoListBox>
                 <S.TodoList>
                     {/* TodoList 날짜, 할일 표시 */}
                     <S.TodoHeader>
-                        오늘 할일 3 개
+                        <TodoDate/>
                     </S.TodoHeader>
 
                     {/* TodoList 할일 리스트*/}
