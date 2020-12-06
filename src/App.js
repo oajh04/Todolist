@@ -1,9 +1,10 @@
 import React from 'react';
-import {Todolist,} from './Component/index';
+import {Todolist, TodolistLocal} from './Component/index';
 
 function App() {
+
   return (
-    <Todolist/>
+    <TodolistLocal  />
   );
 }
 
