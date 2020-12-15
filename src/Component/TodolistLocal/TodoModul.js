@@ -1,4 +1,4 @@
-import React, { useReducer, createContext, useContext, useRef, useState } from 'react';
+import React, { useReducer, createContext, useContext, useRef } from 'react';
 
 const initialTodos = JSON.parse(localStorage.getItem('todolist'));
 
