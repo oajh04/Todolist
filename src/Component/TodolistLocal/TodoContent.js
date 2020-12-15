@@ -21,4 +21,4 @@ const TodoContent = () => {
     )
 }
 
-export default TodoContent;
+export default React.memo(TodoContent);
