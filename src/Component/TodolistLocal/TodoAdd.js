@@ -41,5 +41,4 @@ const TodoAdd = () => {
     )
 }
 
-export default React.memo(TodoAdd);
-
+export default TodoAdd;
